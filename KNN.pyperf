@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<ProfilingTarget xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ProjectTarget>
+    <TargetProject>831a05c2-2e9c-4c20-9b34-b8286a808d3c</TargetProject>
+    <FriendlyName>KNN</FriendlyName>
+  </ProjectTarget>
+</ProfilingTarget>
