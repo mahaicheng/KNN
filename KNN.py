@@ -1,3 +1,6 @@
+#!/usr/bin/python
+# -*- coding: UTF-8 -*-
+
 from numpy import *
 import operator
 
@@ -6,9 +9,19 @@ def createDataSet():
     labels = ['A', 'A', 'B', 'B']
     return group,labels
 
+def classify0(inX, dataSet, labels, k):
+    dataSetSize = dataSet.shape[0]
+    diffMat = tile(inX, (dataSetSize, 1)) - dataSet
+    sqDiffMat = diffMat**2
+    sqDistance = sqDiffMat.sum(axis = 1)
+    distance = sqDistance**0.5
+    sortedDistIndesticy = distance.argsort()
 
+    classCount = {}
 
-if __name__ == '__main__':
-    group,labels = createDataSet()
-    print(group)
-    print(labels)
+    for i in range(k):
+        voteLabels = labels[sortedDistIndesticy[i]]
+        classCount[voteLabels] = classCount.get(voteLabels, 0) + 1
+
+    sortedClassCount = sorted(sortedTuple, key=operator.itemgetter(1), reverse=True)
+    return sortedClassCount[0][0]
