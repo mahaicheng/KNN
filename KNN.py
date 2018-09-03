@@ -23,5 +23,5 @@ def classify0(inX, dataSet, labels, k):
         voteLabels = labels[sortedDistIndesticy[i]]
         classCount[voteLabels] = classCount.get(voteLabels, 0) + 1
 
-    sortedClassCount = sorted(sortedTuple, key=operator.itemgetter(1), reverse=True)
+    sortedClassCount = sorted(classCount.items(), key=operator.itemgetter(1), reverse=True)
     return sortedClassCount[0][0]

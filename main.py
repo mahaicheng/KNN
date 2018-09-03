@@ -4,14 +4,11 @@
 import KNN
 
 if __name__ == '__main__':
-
-    t = (('A', 1), ('B', 2))
-    d = dict(t)
-
-
     group,labels = KNN.createDataSet()
-    print(group)
-    print(labels)
-    probLabel = KNN.classify0([0,0],group, labels, 3)
-    print(probLabel)
+    try:
+        x,y,k = input('input x, y, k\n').split()
+        probLabel = KNN.classify0([int(x),int(y)],group, labels, int(k))
+        print(probLabel)
+    except Exception as e:
+        print(e)
 
