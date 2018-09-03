@@ -4,4 +4,9 @@
     <TargetProject>831a05c2-2e9c-4c20-9b34-b8286a808d3c</TargetProject>
     <FriendlyName>KNN</FriendlyName>
   </ProjectTarget>
+  <Reports>
+    <Report>
+      <Filename>C:\Users\马海城\AppData\Local\Temp\KNN_20180904.vsp</Filename>
+    </Report>
+  </Reports>
 </ProfilingTarget>
